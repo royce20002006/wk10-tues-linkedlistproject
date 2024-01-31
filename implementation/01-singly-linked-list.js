@@ -84,13 +84,12 @@ class SinglyLinkedList {
         this.length--;
         return current;
     }
+    // 0(n)
 
     peekAtHead() {
-        // Return the value of head node
-
-        // Your code here
-
-        // Write your hypothesis on the time complexity of this method here
+        if (!this.length) return undefined;
+        return this.head.value;
+        
     }
 
     print() {
