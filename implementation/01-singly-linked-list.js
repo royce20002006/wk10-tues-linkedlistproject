@@ -13,7 +13,7 @@ class SinglyLinkedList {
     }
 
     addToHead(val) {
-        /
+        
         const newNode = new SinglyLinkedNode(val);
 
         newNode.next = this.head;
@@ -66,11 +66,23 @@ class SinglyLinkedList {
     }
 
     removeFromTail() {
-        // Remove node at tail
+        if (!this.length) return undefined;
+        if (this.length === 1) {
+            this.head = null;
+            this.length--;
+            return this.head;
+        }
 
-        // Your code here
-
-        // Write your hypothesis on the time complexity of this method here
+        let previus;
+        let current = this.head;
+        while(current.next) {
+            previus = current;
+            current = current.next;
+            
+        }
+        previus.next = null;
+        this.length--;
+        return current;
     }
 
     peekAtHead() {
