@@ -76,11 +76,8 @@ class SinglyLinkedList {
     }
 
     findMid() {
-        let length = this.listLength();
-        let mid = Math.floor(length /2);
-        console.log(mid);
-        console.log(this.findMid(mid))
-        return this.findNthNode(mid);
+        let index = Math.floor((this.listLength() - 1) / 2);
+        return this.findNthNode(index);
     }
 
 
