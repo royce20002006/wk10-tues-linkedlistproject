@@ -82,6 +82,14 @@ class SinglyLinkedList {
 
 
     reverse() {
+        let newList = new SinglyLinkedList();
+        for (let i = this.length - 1; i >= 0; i--) {
+            newList.addToTail(this.findNthNode(i).value);
+        }
+        console.log('new', newList)
+        console.log('old', SinglyLinkedNode)
+        return newList;
+        
         // Returns a new reversed version of the linked list
         // Try implementing it by returning a new linked list then returning
         // the original linked list reversed in place
